@@ -24,8 +24,9 @@ public class Comarca {
 
     public int calcularTotalHabitants() {
 
+
     }
-    
+
     
     public void showComarca() {
         System.out.println("\nLes dades de la comarca " + nom + " són:");
