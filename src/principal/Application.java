@@ -1,10 +1,6 @@
 package principal;
 
 
-/**
- *
- * @author fta
- */
 public class Application {
 
     private static Regio[] regions = new Regio[10];
@@ -125,70 +121,17 @@ public class Application {
         } while (opcio != 0);
     }
 
-    /*
-     TODO Heu de desenvolupar el menuComarques amb les opcions que podeu veure.
-     Nota: penseu que quan arribem aquí, l'atribut regioActual no és null
-       
-     Opció 0. Sortir -->       Surt del menú i retorna al menú principal
-     Opció 1. Alta -->         Crea una comarca de la regió actual. Penseu que Regio sap crear comarques        
-     Opció 2. Modificar -->    Permet modificar una comarca de la regió actual.
-     (per comprovar l'existència de la comarca tenim un mètode en la classe Regio que ens ajuda)
-     Opció 3. Llista de comarques--> Imprimeix les dades de les comarques de la regió actual
-        
-     A més, heu de fer una estructura iterativa per tornar a mostrar el menú sempre que no es premi l'opció 0 de sortida
-     Recomanacions:
-     - estructura de control switch-case per bifurcar les opcions
-     - si no s'ha introduït cap opció de les de la llista, s'ha de mostrar el missatge
-     "S'ha de seleccionar una opció correcta del menú."
-     - definiu una variable opcio de tipus enter
-     */
+
     public static void menuComarques() {
         
     }
 
-    /*
-     TODO Heu de desenvolupar el menuCiutats amb les opcions que podeu veure.
-     Nota: penseu que quan arribem aquí, l'atribut regioActual no és null
-       
-     Opció 0. Sortir -->       Surt del menú i retorna al menú principal
-     Opció 1. Alta -->         Crea una ciutat de la regió actual afegint-la a una comarca. 
-                               Penseu que Regio sap afegir una ciutat a una comarca seleccionada.       
-     Opció 2. Modificar -->    Permet modificar una ciutat de la regió actual. Penseu que totes les 
-                               ciutats d'una regió pertanyen a una comarca d'aquesta regió i que 
-                               Regio sap modificar una ciutat que pertany a una de les seves comarques.
-     Opció 3. Llista de ciutats--> Imprimeix les dades de totes les ciutats de la regió actual.
-        
-     A més, heu de fer una estructura iterativa per tornar a mostrar el menú sempre que no es premi l'opció 0 de sortida
-     
-     Recomanacions:
-     - estructura de control switch-case per bifurcar les opcions
-     - si no s'ha introduït cap opció de les de la llista, s'ha de mostrar el missatge "S'ha de seleccionar una opció correcta del menú."
-     - definiu una variable opcio de tipus enter
-     */
+
     public static void menuCiutats() {
         
     }
 
 
-    /*
-     TODO Heu de desenvolupar el menuPobles amb les opcions que podeu veure.
-     Nota: penseu que quan arribem aquí, l'atribut regioActual no és null
-       
-     Opció 0. Sortir -->       Surt del menú i retorna al menú principal
-     Opció 1. Alta -->         Crea un poble de la regió actual afegint-lo a una comarca. 
-                               Penseu que Regio sap afegir un poble a una comarca seleccionada.       
-     Opció 2. Modificar -->    Permet modificar un poble de la regió actual. Penseu que tots els pobles
-                               d'una regió pertanyen a una comarca d'aquesta regió i que Regio sap modificar
-                               un poble que pertany a una de les seves comarques.
-     Opció 3. Llista de pobles--> Imprimeix les dades de tots els pobles de la regió actual.
-        
-     A més, heu de fer una estructura iterativa per tornar a mostrar el menú sempre que no es premi l'opció 0 de sortida
-     
-     Recomanacions:
-     - estructura de control switch-case per bifurcar les opcions
-     - si no s'ha introduït cap opció de les de la llista, s'ha de mostrar el missatge "S'ha de seleccionar una opció correcta del menú."
-     - definiu una variable opcio de tipus enter
-     */
     public static void menuPobles() {
         int opcio;
 
@@ -225,25 +168,7 @@ public class Application {
         } while (opcio != 0);
     }
 
-    /*
-     TODO Heu de desenvolupar el menuZonesRurals amb les opcions que podeu veure.
-     Nota: penseu que quan arribem aquí, l'atribut regioActual no és null
-       
-     Opció 0. Sortir -->       Surt del menú i retorna al menú principal
-     Opció 1. Alta -->         Crea una zona rural de la regió actual afegint-la a una comarca. 
-                               Penseu que Regio sap afegir una zona rural a una comarca seleccionada.       
-     Opció 2. Modificar -->    Permet modificar una zona rural de la regió actual. Penseu que totes les 
-                               zones rurals d'una regió pertanyen a una comarca d'aquesta regió i que 
-                               Regio sap modificar una zona rural que pertany a una de les seves comarques.
-     Opció 3. Llista de zones rurals--> Imprimeix les dades de totes les zones rurals de la regió actual.
-        
-     A més, heu de fer una estructura iterativa per tornar a mostrar el menú sempre que no es premi l'opció 0 de sortida
-     
-     Recomanacions:
-     - estructura de control switch-case per bifurcar les opcions
-     - si no s'ha introduït cap opció de les de la llista, s'ha de mostrar el missatge "S'ha de seleccionar una opció correcta del menú."
-     - definiu una variable opcio de tipus enter
-     */
+
     public static void menuZonesRurals() {
         int opcio;
 

@@ -1,15 +1,7 @@
-/*
- * Classe que defineix una regió. Una regió es defineix pel seu nom, el nom de 
- * la seva capital i un array de comarques.
- */
 package principal;
 
 import territoris.Comarca;
 
-/**
- *
- * @author fta
- */
 public class Regio {
 
     private String nom;
@@ -17,67 +9,16 @@ public class Regio {
     private Comarca[] comarques = new Comarca[5];
     private int pComarques = 0; //Priemra posició buida de l'array de comarques
 
-    /*
-     TODO CONSTRUCTOR
-    
-     Paràmetres: valors per tots els atributs de la classe menys els arrays.
-    
-     Accions:
-     - Assignar als atributs corresponents els valors passats com a paràmetres..
-     */
 
-
-    /*
-     TODO Heu d'implementar tots els mètodes accessors possibles.
-     */
-    
-
-    /*
-    TODO
-    
-     Paràmetres: cap
-    
-     Accions:
-     - Demanar a l'usuari les dades per consola per crear una nova regió. Les dades a demanar 
-       són les que necessita el constructor.
-     - També heu de tenir en compte que el nom de la regió o la seva capital poden ser frase, per exemple, 
-       "Regió IV".
-     
-     Retorn: La nova regió creada.
-     */
     public static Regio addRegio() {
 
     }
 
-    /*
-     TODO
-    
-     Paràmetres: cap
-    
-     Accions:
-     - Demanar a l'usuari que introdueixi les noves dades de la regió i
-       modificar els atributs corresponents d'aquesta regió. Els únics atributs que modificarem
-       són els que hem inicialitzat en el constructor amb els paràmetres passats.
-     - També heu de tenir en compte que el nom de la regió o la seva capital poden ser frase, per exemple, 
-       "Regió IV".
-     - Li heu de mostrar a l'usuari els valors dels atributs abans de modificar-los.
-     
-    Retorn: cap
-     */
     public void updateRegio() {
 
     }
 
-    /*
-     TODO
-    
-     Paràmetres: cap
-    
-     Accions:
-     - Calcular el total d'habitants de la regió a partir dels habitants de les comarques.
-     
-     Retorn: nombre total d'habitants
-     */
+
     public int calcularTotalHabitants() {
 
     }
@@ -88,23 +29,6 @@ public class Regio {
         System.out.println("\nTotal habitants: " + calcularTotalHabitants());
     }
 
-    /*
-     COMARCA
-     */
- /*
-     TODO
-    
-     Paràmetres: cap
-    
-     Accions:
-     - Afegeix una nova comarca a l'array de comarques de la regió actual si aquesta no existeix. 
-       Per afegir-la heu de fer servir el mètode de la classe Comarca escaient i per comprovar la seva 
-       existència el mètode d'aquesta classe que ens ajuda en aquesta tasca.
-     - Actualitza la posició de l'array de comarques si s'afegeix la comarca.
-     - Mostra el missatge "La comarca ja existeix" si no s'ha afegit la comarca.
-    
-     Retorn: cap
-     */
     public void addComarca() {
 
     }
