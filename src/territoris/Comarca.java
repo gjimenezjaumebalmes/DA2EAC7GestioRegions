@@ -12,7 +12,7 @@ public class Comarca {
     private int pZonesRurals = 0; //Priemra posició buida de l'array de zones rurals
 
 
-    public static Comarca addComarca() {
+    public static Comarca () {
 
     }
 
@@ -23,7 +23,7 @@ public class Comarca {
 
 
     public int calcularTotalHabitants() {
-
+        addComarca
 
     }
 

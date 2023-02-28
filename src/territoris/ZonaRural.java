@@ -7,6 +7,42 @@ public class ZonaRural {
     private int habitants;
     private double densitat;
 
+    public int getCodiZonaRural()
+    {
+        return codi;
+    }
+    public void setCodiZonaRural(int codi)
+    {
+        this.codi = codi;
+    }
+
+    public String getNomZonaRural()
+    {
+        return nom;
+    }
+    public void setNomZonaRural(String nom)
+    {
+        this.nom = nom;
+    }
+
+    public int getHabitantsZonaRural()
+    {
+        return habitants;
+    }
+    public void setHabitantsZonaRural(int habitants)
+    {
+        this.habitants = habitants;
+    }
+
+    public double getDensitatZonaRural()
+    {
+        return densitat;
+    }
+    public void setDensitatZonaRural(double densitat)
+    {
+        this.densitat = densitat;
+    }
+
 
     public static ZonaRural addZonaRural() {
 
