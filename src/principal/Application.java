@@ -1,10 +1,17 @@
 package principal;
 
+import java.util.Scanner;
+//import territoris.Ciutat;
+//import territoris.Poble;
+//import territoris.ZonaRural;
+//import territoris.Comarca;
+
 public class Application {
 
     private static Regio[] regions = new Regio[10];
     private static int pRegions = 0; //Priemra posició buida del vector regions
     private static Regio regioActual = null;
+    private static final Scanner DADES = new Scanner(System.in);
 
     public static void main(String[] args) {
         menuPrincipal();
@@ -137,16 +144,21 @@ public class Application {
                 case 0:
                     break;
                 case 1:
-                    addComarca()
+                    regioActual.addComarca();
                     break;
                 case 2:
-
+                    regioActual.selectComarca();
                     break;
                 case 3:
+                    indexSel = regioActual.selectComarca(null);
+                    if (indexSel >= 0) {
 
+                    } else {
+                        System.out.println("\nNo existeix aquesta comarca");
+                    }
                     break;
                 case 4:
-
+                    regioActual.showComarca();
             }
         } while (opcio != 0);
     }
@@ -170,16 +182,16 @@ public class Application {
                 case 0:
                     break;
                 case 1:
-
+                    regioActual.addCiutatComarca();
                     break;
                 case 2:
-
+                    regioActual.selectCiutatComarca();
                     break;
                 case 3:
-
+                    regioActual.updateCiutatComarca();
                     break;
                 case 4:
-
+                    regioActual.showCiutatComarca();
             }
         } while (opcio != 0);
     }
@@ -223,25 +235,6 @@ public class Application {
         } while (opcio != 0);
     }
 
-    /*
-     TODO Heu de desenvolupar el menuZonesRurals amb les opcions que podeu veure.
-     Nota: penseu que quan arribem aquí, l'atribut regioActual no és null
-
-     Opció 0. Sortir -->       Surt del menú i retorna al menú principal
-     Opció 1. Alta -->         Crea una zona rural de la regió actual afegint-la a una comarca.
-                               Penseu que Regio sap afegir una zona rural a una comarca seleccionada.
-     Opció 2. Modificar -->    Permet modificar una zona rural de la regió actual. Penseu que totes les
-                               zones rurals d'una regió pertanyen a una comarca d'aquesta regió i que
-                               Regio sap modificar una zona rural que pertany a una de les seves comarques.
-     Opció 3. Llista de zones rurals--> Imprimeix les dades de totes les zones rurals de la regió actual.
-
-     A més, heu de fer una estructura iterativa per tornar a mostrar el menú sempre que no es premi l'opció 0 de sortida
-
-     Recomanacions:
-     - estructura de control switch-case per bifurcar les opcions
-     - si no s'ha introduït cap opció de les de la llista, s'ha de mostrar el missatge "S'ha de seleccionar una opció correcta del menú."
-     - definiu una variable opcio de tipus enter
-     */
     public static void menuZonesRurals() {
         int opcio;
 

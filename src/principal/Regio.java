@@ -1,26 +1,43 @@
 package principal;
 
 import territoris.Comarca;
+import territoris.Ciutat;
+import territoris.Poble;
+import territoris.ZonaRural;
+
+import java.util.Scanner;
+
+
 
 public class Regio {
-
     private String nom;
     private String capital;
     private Comarca[] comarques = new Comarca[5];
-    private int pComarques = 0; //Priemra posició buida de l'array de comarques
+    private int pComarques = 0; //Primera posició buida de l'array de comarques
+    private static final Scanner DADES = new Scanner(System.in);
 
-
-    public static Regio addRegio() {
-
+    public void addRegio(String nom, String capital) {
+        this.nom = nom;
+        this.capital = capital;
     }
 
-    public void updateRegio() {
 
+    public void updateRegio(String nom, String capital) {
+        if (nom != null) {
+            this.nom = nom;
+        }
+        if (capital != null) {
+            this.capital = capital;
+        }
     }
 
 
     public int calcularTotalHabitants() {
-
+        int totalHabitants = 0;
+        for (int i = 0; i < pComarques; i++) {
+            totalHabitants += comarques[i].getHabitants();
+        }
+        return totalHabitants;
     }
 
     public void showRegio() {
@@ -30,8 +47,14 @@ public class Regio {
     }
 
     public void addComarca() {
-
+        if (pComarques < comarques.length) {
+            comarques[pComarques] = comarca;
+            pComarques++;
+        } else {
+            System.out.println("No es pot afegir la comarca, l'array de comarques està ple");
+        }
     }
+
 
     public int selectComarca(String nom) {
 
@@ -41,7 +64,7 @@ public class Regio {
         }
 
         for (int i = 0; i < pComarques; i++) {
-            if (comarques[i].getNom().equals(nom)) {
+            if (comarques[i].getNomComarca().equals(nom)) {
                 return i;
             }
         }
@@ -176,4 +199,11 @@ public class Regio {
 
     }
 
+    public Comarca[] getComarques() {
+       return comarques;
+    }
+
+    public void setComarques(Comarca[] comarques) {
+        this.comarques = comarques;
+    }
 }
